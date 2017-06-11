@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+    #Имя хоста
+    ServerName host1.server1
+    #Корневая папка хоста
+    DocumentRoot /var/www/html//MVC_php/
+    <Directory /var/www/html/MVC_php/>
+        #Разрешение на перезапись всех директив при помощи .htaccess
+        AllowOverride All
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+</VirtualHost>
+
+
+sudo nano host1.server1.conf
+/etc/apache2/sites-available$  sudo service apache2 restart
